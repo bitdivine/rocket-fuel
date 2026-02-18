@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 48,
+  "summary": "Banana is a full-stack Internet Computer (IC) web app for showcasing and crowdsourcing “banana moments” from comics. A Motoko backend canister stores comic entries (title, series, description, optional image URL and source link, created timestamp), while a React (Vite) + Tailwind/shadcn-ui frontend provides pages to browse, view details, and submit new entries, with Internet Identity-based authentication support and React Query for data fetching/caching.",
+  "existing_features": [
+    {
+      "id": "IF-1",
+      "title": "Motoko comic entries canister API",
+      "synonyms": [
+        "backend canister",
+        "comic entries service",
+        "Candid API"
+      ],
+      "description": "Implements Motoko actor methods to create comic entries (with auto-incrementing numeric ID and Time.now timestamp), list all entries, and fetch an entry by ID (trapping when missing).",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-2",
+      "title": "React (Vite) frontend with routed pages",
+      "synonyms": [
+        "TanStack Router app",
+        "frontend scaffold"
+      ],
+      "description": "Single-page app configured with TanStack Router routes for Home, Browse, Comic Detail, and Submit pages, rendered inside a shared Header/Footer layout.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-3",
+      "title": "Browse comics with search, series filter, and sort",
+      "synonyms": [
+        "BrowseComicsPage",
+        "comic listing"
+      ],
+      "description": "Lists comics in a responsive grid, supports text search (title/description/series), filtering by series, and sorting by created date (newest/oldest), with loading skeletons, empty-state messaging, and error alert UI.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-4",
+      "title": "Comic detail view by ID route",
+      "synonyms": [
+        "ComicDetailPage",
+        "deep link detail page"
+      ],
+      "description": "Displays a single comic’s full image (optional), title, series badge, formatted date, full description, and optional external source link, with back navigation and not-found error handling.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-5",
+      "title": "Submit comic entry form with client validation",
+      "synonyms": [
+        "SubmitComicPage",
+        "comic submission"
+      ],
+      "description": "Form to create a new comic entry with required title/series/description (min length), optional image URL and source link validation, inline field errors, success confirmation, toast notifications, and redirect back to browse.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-6",
+      "title": "ComicCard preview component",
+      "synonyms": [
+        "comic grid card",
+        "entry preview card"
+      ],
+      "description": "Reusable card component rendering an entry preview (optional image, series badge, formatted date, title, truncated description) and navigates to the detail route on click.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-7",
+      "title": "React Query hooks for comic data",
+      "synonyms": [
+        "useComicEntries",
+        "useComicEntry",
+        "useCreateComicEntry"
+      ],
+      "description": "Encapsulates backend calls with TanStack React Query for listing entries, fetching a single entry, and creating a new entry; create invalidates the list cache.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-8",
+      "title": "Internet Identity authentication provider",
+      "synonyms": [
+        "II auth",
+        "AuthClient integration"
+      ],
+      "description": "Provides an InternetIdentityProvider context using @dfinity/auth-client to load persisted identities, initiate login, logout/clear identity, and expose login status flags and errors.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-9",
+      "title": "Identity-aware canister actor management",
+      "synonyms": [
+        "useActor",
+        "authenticated actor creation"
+      ],
+      "description": "Creates an anonymous actor when unauthenticated and an identity-backed actor when logged in; on actor change, dependent React Query queries are invalidated/refetched.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-10",
+      "title": "Global theming and dark mode support",
+      "synonyms": [
+        "next-themes",
+        "Tailwind CSS variables"
+      ],
+      "description": "Uses next-themes to toggle dark mode via a class-based strategy, with Tailwind configured to consume CSS-variable theme tokens for background/foreground/surfaces and banana brand colors.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-11",
+      "title": "Banana comic-inspired design system + chocolate-brown app background",
+      "synonyms": [
+        "global theme tokens",
+        "OKLCH palette",
+        "comic shadows"
+      ],
+      "description": "Defines custom fonts (Bangers, Comic Neue), banana palette tokens, comic-style shadows, and sets a chocolate-brown --background for both :root and .dark while keeping foreground and surface tokens readable.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "IF-12",
+      "title": "Global toast notifications",
+      "synonyms": [
+        "sonner toaster",
+        "Toaster"
+      ],
+      "description": "Installs a global Toaster and uses toast notifications for submission success and error feedback.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-13",
+      "title": "Responsive header/footer with branding assets",
+      "synonyms": [
+        "navigation chrome",
+        "mobile menu"
+      ],
+      "description": "Sticky header with logo and navigation buttons (including a mobile hamburger menu) and a footer with attribution; uses generated brand assets (logo/hero).",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-app-s-bottom-bar-footer-styling-so-its-background-color-is-white-not-banana-light-while-keeping-the-footer-content-readable-and-consistent-with-the-existing-banana-themed-design",
+      "title": "Update the app’s bottom bar (footer) styling so its background color is white (not banana-light), while keeping the footer content readable and consistent with the existing banana-themed design.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Set the bottom bar/footer background color to white",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "architectural_notes": [
+    "Backend is an IC Motoko canister exposing a simple Candid API (create, list, get) for comic entries.",
+    "Frontend uses TanStack Router for client-side routing with a shared Layout (Header/Footer + Outlet).",
+    "Data fetching/mutations are implemented with TanStack React Query hooks; mutations invalidate cached list queries.",
+    "Authentication is managed via an InternetIdentityProvider context (AuthClient) and a useActor hook that creates an anonymous or authenticated canister actor based on identity.",
+    "Styling uses Tailwind CSS with shadcn/ui components and an OKLCH CSS-variable token system; dark mode is toggled via next-themes.",
+    "UI emphasizes UX states: skeleton loading placeholders, destructive alerts for errors, and toast notifications for form outcomes."
+  ],
+  "known_issues": [
+    "Backend storage is in-memory only (no stable variables); data and the auto-increment ID counter will reset on canister upgrade/reinstall.",
+    "Frontend converts IC nanosecond timestamps to JS Number before scaling (e.g., Number(createdAt)); this can lose precision/overflow because IC timestamps exceed JS safe integer range.",
+    "Backend createComicEntry is publicly callable and does not enforce authentication/authorization, validation, or rate limiting.",
+    "Internet Identity provider URL is read from process.env.II_URL; in Vite this is typically import.meta.env, so the provider may be undefined unless specially configured.",
+    "Repository contains both frontend/index.css and frontend/src/index.css; only src/index.css is imported in src/main.tsx, so the other file may be dead/confusing.",
+    "useActor invalidates and refetches all non-actor queries whenever the actor changes, which can cause unnecessary refetch churn on identity changes.",
+    "SubmitComicPage uses setTimeout for redirect after success without cleanup on unmount (minor)."
+  ],
+  "isFixRequest": false,
+  "gameProjectType": "none",
+  "projectName": "banana",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

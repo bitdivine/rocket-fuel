@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-app-s-bottom-bar-footer-styling-so-its-background-color-is-white-not-banana-light-while-keeping-the-footer-content-readable-and-consistent-with-the-existing-banana-themed-design",
+      "featureTitle": "Update the app’s bottom bar (footer) styling so its background color is white (not banana-light), while keeping the footer content readable and consistent with the existing banana-themed design.",
+      "files": [
+        "frontend/src/components/layout/Footer.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Footer background to white while preserving banana theme readability",
+  "requirements": [
+    {
+      "id": "REQ-2",
+      "summary": "Set the bottom bar (footer) background to white while keeping footer content legible and banana-themed, without affecting other sections.",
+      "acceptanceCriteria": [
+        "The footer renders with a white background across the app.",
+        "Footer text and icons remain legible on the white background in both light and dark mode.",
+        "No other page sections (header, main content background) change as part of this update."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/layout/Footer.tsx",
+          "operation": "modify",
+          "description": "Update the footer container styling to use a white background (e.g., Tailwind white token) instead of the current banana-light background, while keeping existing banana-themed borders and ensuring text/link/icon colors remain readable in both light and dark mode."
+        }
+      ]
+    }
+  ]
+}

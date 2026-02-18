@@ -1,0 +1,16 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, defining routes for home, browse, comic detail, and submit pages, wrapped in ThemeProvider with shared layout component.",
+  "frontend/src/components/layout/Header.tsx": "Sticky header component with banana logo, app title, and navigation links to Browse Comics and Submit pages, including responsive mobile menu.",
+  "frontend/src/components/layout/Footer.tsx": "Footer component displaying copyright notice and attribution link to caffeine.ai with heart icon, now with white background and dark text for readability.",
+  "frontend/src/pages/HomePage.tsx": "Landing page featuring hero banner with generated image, project introduction about banana comics (including Minions reference), and call-to-action buttons to browse and submit, with the lower section now using the global cyan background.",
+  "frontend/src/pages/BrowseComicsPage.tsx": "Browse page displaying comic entries in a grid with search, series filter, and sort controls, showing loading skeletons and error states.",
+  "frontend/src/pages/ComicDetailPage.tsx": "Detail page showing full comic entry information including image, title, series badge, description, source link, and creation date with back navigation.",
+  "frontend/src/pages/SubmitComicPage.tsx": "Submission form page with validation for title, series, description (required) and optional image URL and source link fields, showing success/error states.",
+  "frontend/src/components/comics/ComicCard.tsx": "Reusable card component displaying comic entry preview with image, title, series badge, date, and truncated description, navigating to detail page on click.",
+  "frontend/src/hooks/comics/useComicEntries.ts": "React Query hook for fetching the list of all comic entries from the backend.",
+  "frontend/src/hooks/comics/useComicEntry.ts": "React Query hook for fetching a single comic entry by ID with error handling for not-found cases.",
+  "frontend/src/hooks/comics/useCreateComicEntry.ts": "React Query mutation hook for creating new comic entries with automatic cache invalidation.",
+  "frontend/src/index.css": "Global styles with comic-inspired theme including custom fonts (Bangers display, Comic Neue body), comic-style shadow utilities, and OKLCH color system with chocolate brown background (35% lightness, hue 40) for both light and dark modes, with light foreground text for readability against the dark brown background.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with banana color tokens, comic-style shadows, and custom display/body font families for the comic-inspired theme.",
+  "frontend/index.html": "HTML entry point with updated title and meta description for the Banana comics showcase app."
+}

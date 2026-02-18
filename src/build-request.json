@@ -1,0 +1,37 @@
+{
+  "kind": "build_request",
+  "title": "Set footer (bottom bar) background to white",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-2",
+      "text": "Update the app’s bottom bar (footer) styling so its background color is white (not banana-light), while keeping the footer content readable and consistent with the existing banana-themed design.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-9"
+        ],
+        "quotes": [
+          "Make the bottom bar white"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The footer renders with a white background across the app.",
+        "Footer text and icons remain legible on the white background in both light and dark mode.",
+        "No other page sections (header, main content background) change as part of this update."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under frontend/src/components/ui (read-only).",
+    "Do not change backend behavior or data models."
+  ],
+  "nonGoals": [
+    "Redesigning the header or main page backgrounds",
+    "Adding new theme toggles or additional color schemes"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

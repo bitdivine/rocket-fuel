@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.625rem;
+        
+        /* Banana-inspired color palette */
+        --banana-light: 87.5% 0.15 85;
+        --banana-medium: 82% 0.18 85;
+        --banana-accent: 65% 0.22 45;
+        --banana-dark: 25% 0.05 60;
+        
+        --background: 35% 0.08 40;
+        --foreground: 95% 0.02 60;
+        --card: 42% 0.06 40;
+        --card-foreground: 95% 0.02 60;
+        --popover: 42% 0.06 40;
+        --popover-foreground: 95% 0.02 60;
+        --primary: 65% 0.22 45;
+        --primary-foreground: 100% 0 0;
+        --secondary: 87.5% 0.15 85;
+        --secondary-foreground: 25% 0.05 60;
+        --muted: 45% 0.05 40;
+        --muted-foreground: 75% 0.03 60;
+        --accent: 65% 0.22 45;
+        --accent-foreground: 100% 0 0;
+        --destructive: 55% 0.22 25;
+        --destructive-foreground: 100% 0 0;
+        --border: 50% 0.06 40;
+        --input: 50% 0.06 40;
+        --ring: 65% 0.22 45;
+        --chart-1: 65% 0.22 45;
+        --chart-2: 82% 0.18 85;
+        --chart-3: 55% 0.22 25;
+        --chart-4: 45% 0.15 200;
+        --chart-5: 70% 0.18 120;
+    }
+
+    .dark {
+        --background: 30% 0.08 40;
+        --foreground: 95% 0.02 60;
+        --card: 38% 0.06 40;
+        --card-foreground: 95% 0.02 60;
+        --popover: 38% 0.06 40;
+        --popover-foreground: 95% 0.02 60;
+        --primary: 82% 0.18 85;
+        --primary-foreground: 20% 0.02 60;
+        --secondary: 45% 0.05 40;
+        --secondary-foreground: 95% 0.01 85;
+        --muted: 40% 0.05 40;
+        --muted-foreground: 75% 0.03 60;
+        --accent: 65% 0.22 45;
+        --accent-foreground: 100% 0 0;
+        --destructive: 60% 0.22 25;
+        --destructive-foreground: 100% 0 0;
+        --border: 45% 0.06 40;
+        --input: 45% 0.06 40;
+        --ring: 82% 0.18 85;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Comic Neue', cursive, system-ui, -apple-system, sans-serif;
+    }
+    
+    .font-display {
+        font-family: 'Bangers', cursive, system-ui, -apple-system, sans-serif;
+        letter-spacing: 0.02em;
+    }
+    
+    .font-body {
+        font-family: 'Comic Neue', cursive, system-ui, -apple-system, sans-serif;
+    }
+}
+
+@layer utilities {
+    .shadow-comic {
+        box-shadow: 6px 6px 0px oklch(var(--banana-dark));
+    }
+    
+    .shadow-comic-lg {
+        box-shadow: 10px 10px 0px oklch(var(--banana-dark));
+    }
+    
+    .drop-shadow-comic {
+        filter: drop-shadow(4px 4px 0px oklch(var(--banana-dark)));
+    }
+}

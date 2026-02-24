@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-replace-the-current-chocolate-brown-app-background-colour-with-a-sickly-green-tone-a-muted-slightly-nauseating-yellow-green-such-as-8db600-or-oklch-equivalent-across-the-global-theme-update-the-relevant-css-custom-properties-in-frontend-src-index-css-and-or-frontend-tailwind-config-js-so-the-new-background-applies-consistently-in-both-light-and-dark-modes",
+      "featureTitle": "Replace the current chocolate-brown app background colour with a sickly green tone (a muted, slightly nauseating yellow-green such as #8DB600 or oklch equivalent) across the global theme. Update the relevant CSS custom properties in frontend/src/index.css and/or frontend/tailwind.config.js so the new background applies consistently in both light and dark modes.",
+      "files": [
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

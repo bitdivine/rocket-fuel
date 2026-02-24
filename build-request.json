@@ -1,0 +1,40 @@
+{
+  "kind": "build_request",
+  "title": "Change app background colour to sickly green",
+  "projectName": "Banana Comics",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-2",
+      "text": "Replace the current chocolate-brown app background colour with a sickly green tone (a muted, slightly nauseating yellow-green such as #8DB600 or oklch equivalent) across the global theme. Update the relevant CSS custom properties in frontend/src/index.css and/or frontend/tailwind.config.js so the new background applies consistently in both light and dark modes.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "chnage the background colour to sickly green"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The main app background is visibly sickly green (a muted, yellowish-green hue) rather than the previous chocolate-brown.",
+        "The background colour is defined via the design system tokens (CSS variables or Tailwind config) so it applies globally.",
+        "Both light and dark mode backgrounds reflect the sickly green theme.",
+        "No other intentional design colours (header, footer, cards) are unintentionally altered."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or frontend/src/components/ui.",
+    "Do not change the backend."
+  ],
+  "nonGoals": [
+    "Redesigning any component colours beyond the app background.",
+    "Changing typography, layout, or spacing.",
+    "Any backend modifications."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

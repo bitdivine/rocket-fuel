@@ -1,0 +1,29 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Change app background colour to sickly green",
+  "requirements": [
+    {
+      "id": "REQ-2",
+      "summary": "Replace the chocolate-brown app background with a sickly green tone (#8DB600 or similar) across the global theme in both light and dark modes",
+      "acceptanceCriteria": [
+        "The main app background is visibly sickly green (a muted, yellowish-green hue) rather than the previous chocolate-brown.",
+        "The background colour is defined via the design system tokens (CSS variables or Tailwind config) so it applies globally.",
+        "Both light and dark mode backgrounds reflect the sickly green theme.",
+        "No other intentional design colours (header, footer, cards) are unintentionally altered."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update CSS custom properties for background colors in both light and dark modes. Replace the existing chocolate-brown background tokens (--background and related OKLCH values) with sickly green equivalents (target: #8DB600 or similar muted yellow-green in OKLCH format). Ensure the change applies to the root :root selector for light mode and the .dark selector for dark mode, maintaining consistent application of the new background color globally."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Update the Tailwind theme configuration to reference the new sickly green background color tokens. Verify that the background color utilities in the theme.extend.colors section correctly map to the updated CSS variables from index.css, ensuring the banana-themed palette's background entries now reflect the sickly green tone rather than chocolate-brown."
+        }
+      ]
+    }
+  ]
+}
